@@ -1,4 +1,4 @@
-package com.sovince.MatchMode
+package com.sovince.matchMode
 
 /**
   * Created by vince
