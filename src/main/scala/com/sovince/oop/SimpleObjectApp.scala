@@ -22,26 +22,26 @@ object SimpleObjectApp {
 }
 
 
-class People{
-  var name:String = _
-  var age:Int = _
+class People {
+  var name: String = _
+  var age: Int = _
 
   //this可以省略 类外不能直接访问
-  private [this] val gender:String = "male"
+  private[this] val gender: String = "male"
 
   // oop同包内可以直接访问
-  private [oop] val hobby = "music"
+  private[oop] val hobby = "music"
 
 
-  def eat(): Unit ={
-    println(name+" eating")
+  def eat(): Unit = {
+    println(name + " eating")
   }
 
-  def watch(something:String): Unit ={
-    println(name+" is watching "+something)
+  def watch(something: String): Unit = {
+    println(name + " is watching " + something)
   }
 
-  def printGender(): Unit ={
-    println("gender:"+gender)
+  def printGender(): Unit = {
+    println("gender:" + gender)
   }
 }

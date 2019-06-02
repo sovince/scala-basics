@@ -10,12 +10,12 @@ package com.sovince.matchMode
 object ExceptionApp extends App {
 
   try {
-    var res:Int = 1/0
+    var res: Int = 1 / 0
     println(res)
-  }catch {
-    case e:ArithmeticException => println("被除数不能为0")
-    case e:Exception => println(e.getMessage)
-  }finally {
+  } catch {
+    case e: ArithmeticException => println("被除数不能为0")
+    case e: Exception => println(e.getMessage)
+  } finally {
     //do something that must be done
   }
 

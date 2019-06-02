@@ -9,16 +9,16 @@ package com.sovince.collection
   */
 object Tuple extends App {
 
-  val t = (1,2,3,4)
+  val t = (1, 2, 3, 4)
   println(t._1)
   println(t.productElement(0))
 
-  for (i<-0 until t.productArity){
+  for (i <- 0 until t.productArity) {
     print(t.productElement(i))
   }
   println()
 
-  val (a,b) = (1,2)
+  val (a, b) = (1, 2)
   println(b)
 
 }

@@ -18,4 +18,4 @@ object CaseClassApp {
 //不用new
 //通常用在模式匹配
 //当bean用也可？
-case class Cat(name:String)
+case class Cat(name: String)

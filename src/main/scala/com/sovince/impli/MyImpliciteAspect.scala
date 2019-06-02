@@ -11,7 +11,7 @@ import java.io.File
   */
 object MyImpliciteAspect {
 
-  implicit def man2uperman(man:Man):Superman = new Superman(man.name)
+  implicit def man2uperman(man: Man): Superman = new Superman(man.name)
 
-  implicit def file2rRichFile(file: File):RichFile = new RichFile(file)
+  implicit def file2rRichFile(file: File): RichFile = new RichFile(file)
 }

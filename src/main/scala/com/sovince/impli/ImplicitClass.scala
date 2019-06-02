@@ -8,12 +8,13 @@ package com.sovince.impli
   * Description:
   */
 object ImplicitClass extends App {
-  implicit class Calculator(x:Int){
-    def add(y:Int): Int = x+y
+
+  implicit class Calculator(x: Int) {
+    def add(y: Int): Int = x + y
   }
 
-  implicit class TextWrapper(s:String){
-    def around(string: String): String ={
+  implicit class TextWrapper(s: String) {
+    def around(string: String): String = {
       s"$string $s $string"
     }
   }

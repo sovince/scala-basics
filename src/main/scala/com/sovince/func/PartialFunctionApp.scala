@@ -14,7 +14,7 @@ object PartialFunctionApp extends App {
 
   //第一个类型是入参类型  第二个类型是返回值类型
   //实际就是省了match?
-  def sayNumbers:PartialFunction[Int,String]={
+  def sayNumbers: PartialFunction[Int, String] = {
     case 1 => "one"
     case 2 => "two"
     case _ => "I don't know"

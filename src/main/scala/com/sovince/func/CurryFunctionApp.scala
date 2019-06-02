@@ -14,11 +14,11 @@ object CurryFunctionApp extends App {
   /**
     * 普通函数写法  两个参数
     */
-  def add(x:Int,y:Int) = x+y
+  def add(x: Int, y: Int) = x + y
 
   /**
     * curry化之后的函数
     */
-  def addCurry(x:Int)(y:Int) = x+y
+  def addCurry(x: Int)(y: Int) = x + y
 
 }

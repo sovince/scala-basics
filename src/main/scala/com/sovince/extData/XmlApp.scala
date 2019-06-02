@@ -19,5 +19,4 @@ object XmlApp extends App {
   println(id.text)
 
 
-
 }

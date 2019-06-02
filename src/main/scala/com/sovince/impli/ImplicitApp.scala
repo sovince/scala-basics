@@ -11,6 +11,7 @@ import scala.io.Source
   * Time: 19:08
   * Description:隐式转换 实现了代理
   */
+
 import MyImpliciteAspect._
 
 object ImplicitApp extends App {
@@ -19,10 +20,10 @@ object ImplicitApp extends App {
   readFile()
 
 
-  def becomeSuperman(): Unit ={
+  def becomeSuperman(): Unit = {
 
     //用superman对man中没有的方法和属性进行了增强
-//    implicit def man2uperman(man:Man):Superman = new Superman(man.name)
+    //    implicit def man2uperman(man:Man):Superman = new Superman(man.name)
     //统一 import MyImpliciteAspect._
     val man = new Man("Vince")
     man.fly()
@@ -30,36 +31,40 @@ object ImplicitApp extends App {
     println(man.factor)
     println(man.i)
   }
-  def readFile(): Unit ={
-//    implicit def file2rRichFile(file: File):RichFile = new RichFile(file)
+
+  def readFile(): Unit = {
+    //    implicit def file2rRichFile(file: File):RichFile = new RichFile(file)
     val file = new File("/Users/vince/temp/a")
 
-    println("file.read: "+file.read())
+    println("file.read: " + file.read())
   }
 
 }
 
-class Man(val name:String){
+class Man(val name: String) {
   val factor = 0
-  def  eat(): Unit ={
+
+  def eat(): Unit = {
     println(s"$name is eating")
   }
 }
 
-class Superman(val name:String){
+class Superman(val name: String) {
   val factor = 1
   val i = 9
+
   def fly(): Unit = {
     println(s"$name is flying")
   }
-  def eating(): Unit ={
+
+  def eating(): Unit = {
     println("???")
   }
 
 }
 
-class RichFile(val file:File){
-  def read(): String ={
+class RichFile(val file: File) {
+  def read(): String = {
     Source.fromFile(file.getPath).mkString
   }
 }

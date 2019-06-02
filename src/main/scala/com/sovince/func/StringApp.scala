@@ -15,22 +15,22 @@ object StringApp {
     multiLines()
   }
 
-  def singleLine(): Unit ={
+  def singleLine(): Unit = {
     val name = "Anne"
     val nation = "China"
 
     println(s"Hello $name,welcome to $nation")
   }
 
-  def multiLines(): Unit ={
+  def multiLines(): Unit = {
     val name = "Vince"
     val nation = "British"
     val s =
       s"""
-        |Hello $name
+         |Hello $name
 
-        |Welcome to $nation
-        |
+         |Welcome to $nation
+         |
       """.stripMargin
     println(s)
   }

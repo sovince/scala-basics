@@ -16,7 +16,7 @@ object ImplicitParamApp extends App {
   doEat
   doEat(new Man("Ooo"))
 
-  def doEat(implicit man: Man): Unit ={
+  def doEat(implicit man: Man): Unit = {
     man.eat()
   }
 }

@@ -9,22 +9,22 @@ package com.sovince.oop
   */
 object AbstractApp {
   def main(args: Array[String]): Unit = {
-    val dog = new Dog("jo","H")
+    val dog = new Dog("jo", "H")
     println(dog)
 
   }
 }
 
-abstract class Animal{
+abstract class Animal {
   def eat()
 
-  var name:String
-  var kind:String
+  var name: String
+  var kind: String
 
-  var age:Int=1
+  var age: Int = 1
 }
 
-class Dog(override var name: String, override var kind: String) extends Animal{
+class Dog(override var name: String, override var kind: String) extends Animal {
   override def eat(): Unit = println("eating")
 
 

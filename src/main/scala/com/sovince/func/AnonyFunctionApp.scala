@@ -9,10 +9,10 @@ package com.sovince.func
   */
 object AnonyFunctionApp extends App {
 
-  val f1 = (x:Int)=>x+1
+  val f1 = (x: Int) => x + 1
   println(f1(2))
   println(add(4, 5))
 
 
-  def add = (x:Int,y:Int)=>x+y
+  def add = (x: Int, y: Int) => x + y
 }

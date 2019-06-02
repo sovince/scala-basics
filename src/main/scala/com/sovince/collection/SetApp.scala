@@ -10,13 +10,13 @@ import scala.collection.mutable
   * Description:
   */
 object SetApp extends App {
-  val s = Set(1,1,2,3)
+  val s = Set(1, 1, 2, 3)
   println(s)
 
   val ms = mutable.HashSet[Int]()
-  ms +=1
-  ms +=9
-  ms ++=s
+  ms += 1
+  ms += 9
+  ms ++= s
   println(ms)
 
 }
