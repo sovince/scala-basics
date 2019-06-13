@@ -19,15 +19,20 @@ object ApplyApp {
     //    println(Cup.count)//这说明object是个单例
 
 
-    println("-----------------")
+    println("-----------------1")
     val c = Cup()
     //通过单例object拿到class对象
+    println("-----------------2")
     val d = Cup()
+    println("-----------------3")
     println(c) //拿到的是不同的对象
     println(d)
-    println("-----------------")
+    // 如果在object中先定义全局变量x存newCup() 再在apply()中 if(x==null) x=new Cut()   就可以拿相同对象？
+    // 由此 object 可以作factory ?
+    // 但伴生只能1v1 ...
+    println("-----------------4")
     Cup.apply()
-    println("-----------------")
+    println("-----------------5")
     c.apply()
 
 
@@ -43,8 +48,10 @@ class Cup {
   println("class in")
   println("class out")
 
+  //不必写
   def apply(): Unit = {
     println("Class Cup apply")
+    //throw new Error()
   }
 }
 
@@ -59,6 +66,7 @@ object Cup {
   }
 
 
+  //指向class
   def apply(): Cup = {
     println("Object Cup apply")
     new Cup()
